@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+<body>
+
+    <div class='container'>
+        <div ng-app="myApp" ng-controller="myCtrl">
+
+        <h3>Algos:</h3>
+
+        <input placeholder="Search" type="text" ng-model="test">
+
+        <div 
+            class='collection'
+            ng-repeat="x in names | filter:test">
+                  <a href="{{x}}.html" class="collection-item">{{x}}</a>
+        </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        angular.module('myApp', []).controller('myCtrl', function($scope) {
+            $scope.names = [
+                'HTN',
+                'DM2',
+                'CKD',
+                'HF',
+            ];
+        });
+    </script>
+
+
+</body>
+</html>
