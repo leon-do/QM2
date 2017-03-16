@@ -9,14 +9,14 @@
     <div class='container'>
         <div ng-app="myApp" ng-controller="myCtrl">
 
-        <h3>Algos:</h3>
+        <h3>Treatment Algorithms and Summaries</h3>
 
         <input placeholder="Search" type="text" ng-model="test">
 
         <div 
             class='collection'
             ng-repeat="x in names | filter:test">
-                  <a href="./{{x}}.html" class="collection-item">{{x}}</a>
+                  <a href="./{{x.link}}.html" class="collection-item">{{x.name}}</a>
         </div>
 
         </div>
@@ -27,11 +27,12 @@
     <script>
         angular.module('myApp', []).controller('myCtrl', function($scope) {
             $scope.names = [
-                'htn',
-                'htn secondary causes',
-                'dm2',
-                'dm2 medication guide',
-                'hf',
+                {name:'Hypertension (HTN)',link:'htn'},
+                {name:'Diabetes Type II (DM, DM Type II)', link:'dm2'},
+                {name:'Hypertension (HTN)', link:'htn secondary causes'},
+                {name:'Diabetes Type II (DM, DM Type II)', link:'dm2'},
+                {name:'Diabetes Type II: Medication Guide',link:'dm2 medication guide'},
+                {name:'Heart Failure with Reduced Ejection Fraction (HFrEF)',link:'hf'}
             ];
         });
     </script>
