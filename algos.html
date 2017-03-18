@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     </head>
 <body>
@@ -19,22 +20,30 @@
                   <a href="./{{x.link}}.html" class="collection-item">{{x.name}}</a>
         </div>
 
-        </div>
-    </div>
-
 
 
     <script>
         angular.module('myApp', []).controller('myCtrl', function($scope) {
             $scope.names = [
-                {name:'Diabetes Type II (DM, DM Type II)', link:'dm2'},
-                {name:'Diabetes Type II: Medication Guide',link:'dm2 medication guide'},            
-                {name:'Heart Failure with Reduced Ejection Fraction (HFrEF)',link:'hf'},           
-                {name:'Hypertension (HTN)',link:'htn'},
-                {name:'Hypertension (HTN): Secondary Causes', link:'htn secondary causes'},                
-    
+                {name:'Diabetes Type II (DM, DM Type II):  Oral medication treatment AACE/ACE 2017 (United States)', link:'dm2'},
+                {name:'Diabetes Type II: Medication adverse effect guide AACE/ACE 2017 (United States)',link:'dm2 medication guide'},    
+                {name:'Diabetes Type II: Prediabetes treatment AACE/ACE 2017 (United States)',link:'preDM'},         
+                {name:'Heart failure with reduced ejection fraction (HFrEF): Diagnosis',link:'hf'},   
+                {name:'Heart failure with reduced ejection fraction (HFrEF): Treatment ESC 2016 (Europe)',link:'hfEuro'},           
+                {name:'Hyperlipidemia: Treatment ACC/AHA 2013',link:'hyperlipidemia'}, 
+                {name:'Hypertension (HTN): Goal blood pressure worldwide guidelines combined',link:'htnWorldwide'},
+                {name:'Hypertension (HTN): Goal blood pressure and treatment JNC-8 2014 (United States)',link:'htn'},
+                {name:'Hypertension (HTN): Resistant hypertension (Expert opinion): causes and treatment', link:'htnResistant'},                               
+                {name:'Hypertension (HTN): Secondary hypertension causes and workup', link:'htn secondary causes'},                
+                {name:'Hypertension (HTN): SPRINT trial inclusion, exclusion, and medication selection (SPRINT 2015)', link:'htnSprint'},
+                {name:'Migraine: Migraine prophylaxis (Expert opinion)', link:'migraineProphylaxis'},                    
+                {name:'Pain, general: Topical treatment (Expert opinion)', link:'painTopical'},                 
+                {name:'Pain, neuropathic: Treatment (Expert opinion)', link:'painTreatment'},  
+                {name:'Pain, neuropathic: Medication guide', link:'painMedGuide'},  
+                {name:'Tobacco Cessation: Treatment (Expert opinion)', link:'tobaccoTreatment'}                 
             ];
         });
+
     </script>
 
 
